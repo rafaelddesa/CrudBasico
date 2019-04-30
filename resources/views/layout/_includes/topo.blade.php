@@ -16,12 +16,17 @@
 		      <a style="font-size: 25px" class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
 		      @if(Auth::guest())
 	                <div class="row">
-	                <li><a style="margin-left: 900px;margin-top: 7px" class="nav-item nav-link active" href="{{ route('site.login')}}">Login</a></li>
+	                	<li>
+	                		<a style="margin-left: 900px;margin-top: 7px" class="nav-item nav-link active" href="{{ route('site.login')}}">
+	                			Login
+	                		</a>
+	                	</li>
 	            	</div>
 	            @else
 	            <div class="row">
 	                <li><a style="margin-left: 10px;font-size: 25px" class="nav-item nav-link active" href="{{ route('admin.clientes')}}">Cursos</a></li>
-	                <li><a style="margin-left: 900px;font-size: 19px" class="nav-item nav-link active" href="#"> {{Auth::user()->name }} </a></li>
+	                <li style="margin-left: 900px;font-size: 19px" class="pull-right" href="#"> {{Auth::user()->name }}
+	                </li>
 	                <li><a style="font-size: 19px;text-align: right;" class="nav-item nav-link active" href=" {{route('site.login.sair')}} ">Sair</a></li>
 	            </div>    
 	            @endif
