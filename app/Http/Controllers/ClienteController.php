@@ -8,6 +8,10 @@ use App\Cliente;
 
 class ClienteController extends Controller
 {
+	public function welcome(){
+		return view('welcome');
+	}
+
 	public function index()
 	{
 		$registros = Cliente::all();
